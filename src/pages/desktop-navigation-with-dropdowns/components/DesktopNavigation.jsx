@@ -178,7 +178,7 @@ const DesktopNavigation = () => {
                 <a
                   href={item.path}
                   className={`
-                    relative px-4 py-2 font-body font-medium text-lg transition-all duration-300
+                    relative px-4 py-2 font-body font-medium text-base transition-all duration-300
                     ${hoveredItem === idx
                       ? 'text-accent' :'text-text-primary hover:text-accent'
                     }
