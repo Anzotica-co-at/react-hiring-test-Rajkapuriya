@@ -50,3 +50,10 @@ https://www.ritzcarlton.com/
 1. Push your code to this repository.
 2. Include a working preview link (Vercel/Netlify) if possible.
 3. Add any setup/run instructions in this README.
+
+---
+
+## vercel Preview App
+
+https://reacthiringtest-rajkapuriya.vercel.app/
+
