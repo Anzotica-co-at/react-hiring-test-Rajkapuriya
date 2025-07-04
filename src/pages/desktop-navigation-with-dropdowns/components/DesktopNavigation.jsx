@@ -40,7 +40,7 @@ const DesktopNavigation = () => {
   const navigationItems = [
     {
       label: { en: 'Home' },
-      path: '/homepage-with-hero-carousel',
+      path: '/',
       icon: 'Home',
       description: { en: 'Discover luxury hospitality experiences'}
     },
@@ -152,7 +152,7 @@ const DesktopNavigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/homepage-with-hero-carousel" className="flex items-center space-x-3">
+            <a href="/" className="flex items-center space-x-3">
               <div className="w-10 h-10">
                 <svg viewBox="0 0 40 40" className="w-full h-full text-primary">
                   <rect x="2" y="2" width="36" height="36" rx="8" fill="currentColor"/>
