@@ -8,24 +8,24 @@ module.exports = {
     extend: {
       colors: {
         // Primary Colors
-        'primary': '#1A1A1A', // deep-charcoal
-        'primary-foreground': '#FEFEFE', // soft-white
+        'primary': '#1c1c1c', // Ritz-Carlton text color
+        'primary-foreground': '#FFFFFF', // white
         
         // Secondary Colors
-        'secondary': '#8B7355', // warm-bronze
-        'secondary-foreground': '#FEFEFE', // soft-white
+        'secondary': '#1c1c1c', // same as primary for now
+        'secondary-foreground': '#FFFFFF', // white
         
         // Accent Colors
-        'accent': '#C9A96E', // refined-gold
-        'accent-foreground': '#1A1A1A', // deep-charcoal
+        'accent': '#1c1c1c', // Ritz-Carlton text color
+        'accent-foreground': '#FFFFFF', // white
         
         // Background Colors
-        'background': '#FEFEFE', // soft-white
-        'surface': '#F8F6F3', // subtle-warm-gray
+        'background': '#FFFFFF', // white background
+        'surface': '#FFFFFF', // white surface
         
         // Text Colors
-        'text-primary': '#2C2C2C', // rich-dark-gray
-        'text-secondary': '#6B6B6B', // medium-gray
+        'text-primary': '#1c1c1c', // Ritz-Carlton text color
+        'text-secondary': '#1c1c1c', // same as primary
         
         // Status Colors
         'success': '#2D5A27', // deep-forest-green
@@ -42,10 +42,10 @@ module.exports = {
         'border-hover': 'rgba(0, 0, 0, 0.12)', // subtle-border-hover
       },
       fontFamily: {
-        'heading': ['Playfair Display', 'serif'],
-        'body': ['Inter', 'sans-serif'],
-        'caption': ['Source Sans Pro', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'monospace'],
+        'sans': ['Swiss-721', 'Arial', 'Helvetica', 'sans-serif'],
+        'heading': ['Swiss-721', 'Arial', 'sans-serif'],
+        'body': ['Swiss-721', 'Arial', 'sans-serif'],
+        'caption': ['Swiss-721', 'Arial', 'sans-serif'],
       },
       fontWeight: {
         'light': '300',

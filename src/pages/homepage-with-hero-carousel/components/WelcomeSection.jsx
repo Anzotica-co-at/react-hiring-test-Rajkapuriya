@@ -122,14 +122,10 @@ const WelcomeSection = () => {
 
             <div className="pt-4">
               <Button
-                variant="primary"
-                size="lg"
-                iconName="ArrowRight"
-                iconPosition="right"
+                text={content[currentLanguage].cta}
+                variant="solid"
                 className="font-medium"
-              >
-                {content[currentLanguage].cta}
-              </Button>
+              />
             </div>
           </div>
 

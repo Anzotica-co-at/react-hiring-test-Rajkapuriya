@@ -191,14 +191,11 @@ const HeroCarousel = () => {
                       
                       <div className="pt-4">
                         <Button
-                          variant="secondary"
-                          size="lg"
-                          iconName="ArrowRight"
-                          iconPosition="right"
+                          text={slide.cta}
+                          variant="solid"
                           className="font-medium"
-                        >
-                          {slide.cta}
-                        </Button>
+                          onClick={() => console.log(`Clicked: ${slide.cta}`)}
+                        />
                       </div>
                     </div>
                   </div>
@@ -212,25 +209,21 @@ const HeroCarousel = () => {
       {/* Navigation Controls */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Previous/Next Buttons */}
-        <Button
-          variant="ghost"
-          size="lg"
-          iconName="ChevronLeft"
-          iconSize={28}
+        <button
           onClick={goToPrevious}
-          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 pointer-events-auto bg-background/20 hover:bg-background/40 text-primary-foreground backdrop-blur-sm w-12 h-12 rounded-full"
+          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 pointer-events-auto bg-background/20 hover:bg-background/40 text-primary-foreground backdrop-blur-sm w-12 h-12 rounded-full flex items-center justify-center"
           aria-label="Previous slide"
-        />
+        >
+          <Icon name="ChevronLeft" size={28} />
+        </button>
         
-        <Button
-          variant="ghost"
-          size="lg"
-          iconName="ChevronRight"
-          iconSize={28}
+        <button
           onClick={goToNext}
-          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 pointer-events-auto bg-background/20 hover:bg-background/40 text-primary-foreground backdrop-blur-sm w-12 h-12 rounded-full"
+          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 pointer-events-auto bg-background/20 hover:bg-background/40 text-primary-foreground backdrop-blur-sm w-12 h-12 rounded-full flex items-center justify-center"
           aria-label="Next slide"
-        />
+        >
+          <Icon name="ChevronRight" size={28} />
+        </button>
 
         {/* Bottom Navigation Panel */}
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 pointer-events-auto">
@@ -257,15 +250,13 @@ const HeroCarousel = () => {
               </div>
 
               {/* Play/Pause Button */}
-              <Button
-                variant="ghost"
-                size="sm"
-                iconName={isPlaying ? "Pause" : "Play"}
-                iconSize={16}
+              <button
                 onClick={togglePlayPause}
-                className="text-text-secondary hover:text-accent"
+                className="text-text-secondary hover:text-accent p-2"
                 aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
-              />
+              >
+                <Icon name={isPlaying ? "Pause" : "Play"} size={16} />
+              </button>
             </div>
 
             {/* Progress Bar */}

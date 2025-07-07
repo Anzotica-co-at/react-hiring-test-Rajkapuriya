@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react';
-import HeroCarousel from './components/HeroCarousel';
+import HotelSlider from './components/HotelSlider';
 import WelcomeSection from './components/WelcomeSection';
 import DesktopNavigation from 'pages/desktop-navigation-with-dropdowns/components/DesktopNavigation';
+import HeroCarousel from './components/HeroCarousel';
 
 const HomepageWithHeroCarousel = () => {
   useEffect(() => {
     // Set page title
     document.title = 'The Ritz-Carlton - Luxury Hotels & Resorts';
     
-    // Set meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Experience unparalleled luxury at The Ritz-Carlton. Discover world-class accommodations, exceptional dining, and curated experiences at our luxury hotels and resorts worldwide.');
-    }
-
+   
     // Scroll to top on page load
     window.scrollTo(0, 0);
   }, []);
@@ -24,8 +20,10 @@ const HomepageWithHeroCarousel = () => {
       <DesktopNavigation />
       
       {/* Hero Carousel */}
+      <HeroCarousel/>
+
       <main>
-        <HeroCarousel />
+        <HotelSlider />
         
         {/* Welcome Section */}
         <WelcomeSection />

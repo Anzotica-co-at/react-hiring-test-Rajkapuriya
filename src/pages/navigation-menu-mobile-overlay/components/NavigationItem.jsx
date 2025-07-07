@@ -28,11 +28,7 @@ const NavigationItem = ({ item, onItemClick, isExpanded, onToggleExpanded }) => 
           onClick={handleMainClick}
           className="flex-1 flex items-center space-x-3 p-4 rounded-luxury hover:bg-surface transition-colors duration-fast group text-left"
         >
-          <Icon 
-            name={item.icon} 
-            size={20} 
-            className="text-accent flex-shrink-0" 
-          />
+      
           <div className="flex-1 min-w-0">
             <div className="font-body font-medium text-text-primary group-hover:text-accent truncate">
               {typeof item.label === 'object' ? item.label[currentLanguage] : item.label}
@@ -46,14 +42,17 @@ const NavigationItem = ({ item, onItemClick, isExpanded, onToggleExpanded }) => 
         </button>
         
         {item.submenu && item.submenu.length > 0 && (
-          <Button
-            variant="ghost"
-            size="sm"
-            iconName={isExpanded ? "ChevronUp" : "ChevronDown"}
-            iconSize={20}
+          <button
             onClick={handleExpandClick}
-            className="text-text-secondary hover:text-accent ml-2"
-          />
+            className="text-text-secondary hover:text-accent ml-2 p-2"
+            aria-label={isExpanded ? "Collapse submenu" : "Expand submenu"}
+          >
+            {isExpanded ? (
+              <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 12l5-5 5 5" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
+            )}
+          </button>
         )}
       </div>
 
@@ -66,13 +65,13 @@ const NavigationItem = ({ item, onItemClick, isExpanded, onToggleExpanded }) => 
               onClick={() => onItemClick(subItem)}
               className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-surface transition-colors duration-fast group text-left"
             >
-              {subItem.icon && (
+              {/* {subItem.icon && (
                 <Icon 
                   name={subItem.icon} 
                   size={16} 
                   className="text-text-secondary group-hover:text-accent flex-shrink-0" 
                 />
-              )}
+              )} */}
               <div className="flex-1 min-w-0">
                 <div className="font-body text-text-secondary group-hover:text-accent truncate">
                   {typeof subItem.label === 'object' ? subItem.label[currentLanguage] : subItem.label}
